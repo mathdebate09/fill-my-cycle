@@ -1,0 +1,53 @@
+/* FONT FACES */
+@font-face {
+  font-family: LF-Normal;
+  src: url("../assets/fonts/LibreFranklin-Bold.ttf");
+}
+
+@font-face {
+  font-family: LF-Bold;
+  src: url("../assets/fonts/LibreFranklin-Bold.ttf");
+}
+
+/* ROOT */
+:root {
+  --normal: "LF-Normal", sans-serif;
+  --bold: "LF-Bold", sans-serif;
+}
+
+/* GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* FOOTER */
+.footer {
+  font-family: var(--normal);
+  font-size: 24px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--footer);
+  color: #333333;
+  display: grid;
+  place-items: center;
+}
+
+a {
+  all: unset;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-family: var(--bold);
+  cursor: pointer;
+}

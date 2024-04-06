@@ -1,0 +1,38 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write .",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathdebate09/project-name.git"
+  },
+  "author": "learn.jayssingh@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathdebate09/project-name/issues"
+  },
+  "homepage": "https://github.com/mathdebate09/project-name#readme",
+  "devDependencies": {
+    "css-loader": "^6.9.0",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "html-webpack-plugin": "^5.6.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.1",
+    "style-loader": "^3.3.4",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
