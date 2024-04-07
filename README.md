@@ -1,8 +1,6 @@
-# project-name
+# fill-my-cycle
 A calculator to fill the cycles during Lab Evaluations
-> [Live Website]()
-
-## Preview
+> [Live Website](https://fill-my-cycle.netlify.app/)
 
 ## Tools/Languages
 
@@ -17,3 +15,8 @@ $ cd fill-my-cycle
 $ npm install
 $ npm start
 ```
+
+## Credits
+
+- This project was originally made by an alumini [Sagar Pathare](https://github.com/sspathare97) but due to some reason the page was brought down so I configured and hosted it again.
+- [Link to his repository](https://github.com/sspathare97/fillmycycle)
