@@ -1,53 +1,211 @@
-/* FONT FACES */
-@font-face {
-  font-family: LF-Normal;
-  src: url("../assets/fonts/LibreFranklin-Bold.ttf");
-}
+/* RESET */
 
-@font-face {
-  font-family: LF-Bold;
-  src: url("../assets/fonts/LibreFranklin-Bold.ttf");
-}
-
-/* ROOT */
-:root {
-  --normal: "LF-Normal", sans-serif;
-  --bold: "LF-Bold", sans-serif;
-}
-
-/* GLOBAL STYLES */
-* {
-  margin: 0;
-  padding: 0;
+*, *::before, *::after {
   box-sizing: border-box;
 }
-
-html,
-body {
-  height: 100%;
+* {
   margin: 0;
-  padding: 0;
+}
+body {
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
-/* FOOTER */
-.footer {
-  font-family: var(--normal);
-  font-size: 24px;
-  height: 100%;
-  width: 100%;
-  background-color: var(--footer);
-  color: #333333;
-  display: grid;
-  place-items: center;
+/* FONT FACES */
+
+@font-face {
+  font-family: Body-ff;
+  src: url("../assets/fonts/LibreFranklin-Medium.ttf");
 }
 
-a {
-  all: unset;
-  text-decoration: none;
+@font-face {
+  font-family: Heading-ff;
+  src: url("../assets/fonts/LibreFranklin-Bold.ttf");
 }
 
-a:hover {
-  text-decoration: underline;
-  font-family: var(--bold);
-  cursor: pointer;
+@font-face {
+  font-family: Header-ff;
+  src: url("../assets/fonts/Raleway-Bold.ttf");
+}
+
+
+:root {
+  --bg-primary: #fffcf2;
+  --bg-secondary:#ccc5b9;
+
+  --clr-font: #333333;
+
+  --ff-body-h:"Heading-ff", sans-serif;
+  --ff-body:"Body-ff", sans-serif;
+  --ff-header:"Header-ff", sans-serif;
+
+  --fs-header: 2rem;
+  --fs-primary: 1.2rem;
+  --fs-secondary: 1rem;
+
+}
+
+.container {
+  font-family:var(--ff-body);
+  background-color: var(--bg-primary);
+  font-size: var(--fs-secondary);
+}
+
+.container > * {
+  margin-left:1.2rem;
+}
+
+/* Header */
+header {
+  font-family: var(--ff-header);
+  font-size: var(--fs-header);
+  text-align:center;
+  margin-bottom:1rem;
+}
+
+.inst-help {
+  font-size: var(--fs-secondary);
+  text-align:center;
+}
+
+p > button, .text-left > li > button {
+  all: initial;
+  font-size: var(--fs-secondary);
+  font-family: var(--ff-body-h);
+  text-decoration: underline 4px var(--bg-secondary);
+
+}
+
+/* cycle-entry */
+
+.cycle-entry {
+  display:grid;
+  grid-template-columns: repeat(2, auto);
+  place-items:center;
+  font-size:var(--ff-body);
+  gap:1rem;
+  margin-top:1rem;
+}
+
+table.mrg.ind {
+  margin:0 auto;
+  margin-bottom:0.5rem;
+}
+
+.man-mode-div {
+  margin-bottom:1.2rem;
+  display:grid;
+  place-items:center;
+} 
+
+.man-mode-div > button {
+  background:none;
+  border-color:#ccc5b9;
+  border-radius:5px;
+}
+
+.cycle  input {
+  margin-top:0.2rem;
+}
+/* Table */
+.check {
+  width:100%;
+}
+
+.check-table .table {
+    border-collapse: collapse;
+    width:fit-content;
+}
+
+.check-table .table > thead > tr > th {
+  border: 2px solid black;
+  width:0.875rem;
+  height:0.875rem;
+  margin: 0 auto;
+}
+
+.check-table .table > tbody > tr > th,
+.check-table .table > tbody > tr > td {
+  border: 2px solid black;
+  width:0.875rem;
+  height:0.875rem;
+  margin: 0 auto;
+}
+
+.check-table .table > tbody > tr > th,
+.check-table .table > thead > tr > th {
+  background-color: var(--bg-secondary);
+  padding:0.2em;
+  
+}
+
+.check-table {
+  display:grid;
+  gap:1.5rem;
+  min-width:14rem;
+  place-items:center;
+  font-family: var(--ff-body);
+  font-weight:600;
+  font-size:var(--fs-primary);
+  text-align:center;
+}
+
+form > .reset {
+  width:4em;
+  background-color: #DC5D6D;
+  color:var(--bg-primary);
+  border:none;
+  cursor:pointer;
+  place-self:center;
+  margin:1rem 1rem;
+  border-radius:3px;
+}
+
+form {
+  display:grid;
+}
+
+.text-primary {
+  font-family: var(--ff-body-h);
+  font-size: var(--fs-primary);
+}
+
+/* Footer */
+
+footer {
+  display:grid;
+  place-items:center;
+  height:2rem;
+  background-color:#CFBBA9;
+  margin-top:1rem;
+  font-family: var(--ff-header);
+  font-size:var(--fs-secondary);
+}
+
+footer > p > a {
+  font-family: var(--ff-header);
+  font-size:var(--fs-secondary);
+  color:#333333;
+}
+
+/* Input box */
+input {
+  border:1px;
+  outline:1px solid #a9a59c;
+}
+
+input:focus {
+  
+  outline:1px solid #333333;
 }

@@ -1,12 +1,350 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <div class="container"></div>
-  </body>
+<head>
+	<title>Fill My Cycle</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+		<header >Fill My Cycle</header>
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3 col-xs-12">
+				<form class="form-inline" action="" onsubmit="return false">
+					<div class="inst-help">
+						<p class="mrg">Need Help? <button id="inst-bt" class="btn btn-success btn-xs instr-ref inst-bt">Click here to see Instructions</button></p>
+					</div>
+					<div class="cycle-entry">
+						<div class="cycle">
+							<div class="center-inputs">
+								<table class="mrg ind">
+									<thead>
+										<tr>
+											<th colspan="2">Cycle 1</th>
+										</tr>
+										<tr>
+											<th><span id="c10">1</span>&nbsp;&nbsp;to&nbsp;</th>
+											<th><input class="form-control input-sm" type="number" min="1" max="15"
+													step="1" value="" id="c11" maxlength="2" /></th>
+										</tr>
+										<tr>
+											<th colspan="2">
+												<hr>
+											</th>
+										</tr>
+									</thead>
+									<tbody id="tbl01">
+										<tr>
+											<td>1</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="average">
+								<table class="ind" id="result">
+									<tr>
+										<td colspan="2">
+											<hr>
+										</td>
+									</tr>
+									<tr>
+										<td>Average</td>
+										<td>
+											<input class="form-control input-sm ip" type="number" min="20" max="100"
+												step="2" id="ip1" />
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+						<div class="cycle">
+
+							<div class="average">
+								<table class="mrg ind">
+									<thead>
+										<tr>
+											<th colspan="2">Cycle 2</th>
+										</tr>
+										<tr>
+											<th><span id="c20">6</span>&nbsp;&nbsp;to&nbsp;</th>
+											<th><input class="form-control input-sm" type="number" min="2" max="30"
+													step="1" value="" id="c21" maxlength="2" /></th>
+										</tr>
+										<tr>
+											<th colspan="2">
+												<hr>
+											</th>
+										</tr>
+									</thead>
+									<tbody id="tbl02">
+										<tr>
+											<td>6</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td><input class="form-control input-sm exp" type="number" min="0" max="100"
+													step="1" maxlength="3" /></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="col-xs-6">
+								<table class="ind">
+									<tr>
+										<td colspan="2">
+											<hr>
+										</td>
+									</tr>
+									<tr>
+										<td>Average</td>
+										<td>
+											<input class="form-control input-sm ip" type="number" min="20" max="100"
+												step="2" id="ip2" />
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<br id="man_mode_br">
+					<div class="man-mode-div">
+						
+							<label>
+								<input type="checkbox" id="man_mode" />
+								Manual Check Input Mode
+							</label>
+							<button class="btn btn-success btn-xs instr-ref">New Feature!</button>
+						
+					</div>
+
+					<div class="check-table">
+						<table class="table table-bordered table-hover table-responsive mrg">
+							<thead>
+								<tr>
+									<th>Par\Perf</th>
+									<th class="c">E (5)</th>
+									<th class="c">VG (4)</th>
+									<th class="c">G (3)</th>
+									<th class="c">A (2)</th>
+									<th class="c">BA (1)</th>
+								</tr>
+							</thead>
+							<tbody id="tbl1">
+								<tr>
+									<th>TK (30)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>TD (30)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>LI (10)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>B (10)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>C (20)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table class="table table-bordered table-hover table-responsive mrg">
+							<thead>
+								<tr>
+									<th>Par\Perf</th>
+									<th class="c">E (5)</th>
+									<th class="c">VG (4)</th>
+									<th class="c">G (3)</th>
+									<th class="c">A (2)</th>
+									<th class="c">BA (1)</th>
+								</tr>
+							</thead>
+							<tbody id="tbl2">
+								<tr>
+									<th>TK (30)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>TD (30)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>LI (10)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>B (10)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>C (20)</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table class="table table-bordered table-hover table-responsive mrg">
+							<thead>
+								<tr>
+									<th>Cycle</th>
+									<th class="d">TK</th>
+									<th class="d">TD</th>
+									<th class="d">LI</th>
+									<th class="d">B</th>
+									<th class="d">C</th>
+									<th class="d">Total</th>
+								</tr>
+							</thead>
+							<tbody id="tbl3">
+								<tr>
+									<th>1 to 5</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>6 to 10</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>Total</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>Average</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button class="reset mrg btn btn-primary btn-sm">Reset</button>
+				</form>
+				<p class="text-primary" id="instructions">Instructions</p>
+				<ul class="text-left">
+					<li>Enter cycle ranges, eg. Cycle 1: 1 to 5 and Cycle 2: 6 to 10; then for each experiment enter
+						marks out of 100.</li>
+					<li>Alternatively, enter average marks out of 100 for both the cycles.</li>
+					<li> <button class="btn btn-success btn-xs man-mode-ref">Manual Check Input Mode</button> - Click on
+						the cells in the cycle table to check them and fill the cycle manually</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<footer>
+		<p>w/ luv by <a href="https://github.com/sspathare97" target="_blank">sspathare97</a> & <a href="https://github.com/mathdebate09" target="_blank">mathdebate09</a></p>
+	</footer>
+	<div id="preload"></div>
+</body>
+
 </html>

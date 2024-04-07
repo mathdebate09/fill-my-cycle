@@ -1,4 +1,4 @@
-import myIcon from "./assets/icon.svg";
+import myIcon from "../assets/images/icon.svg";
 
 const link = document.createElement("link");
 link.rel = "icon";
